@@ -139,6 +139,8 @@ N 1220 -410 1220 -160 {
 lab=fbclk}
 N 1220 -160 1300 -160 {
 lab=fbclk}
+N 1050 -580 1050 -560 {
+lab=NDIV[6..3]}
 C {inv.sym} 160 -580 0 0 {name=xinvref1}
 C {inv.sym} 280 -580 0 0 {name=xinvref2}
 C {pfd_cmos.sym} 670 -690 0 0 {name=xpfd}
@@ -214,3 +216,5 @@ C {lab_wire.sym} 2100 -710 0 0 {name=p58 sig_type=std_logic lab=vco}
 C {mash_1_1_dsm_vlog.sym} 1450 -130 0 0 {name=adsm model=dut
 device_model=".model dut d_cosim simulation=\\"ivlng\\" sim_args=[\\"mash_1_1_dsm\\"]"}
 C {lab_pin.sym} 1300 -140 0 0 {name=p43 sig_type=std_logic lab=rstb}
+C {lab_pin.sym} 1050 -560 3 0 {name=p44 sig_type=std_logic lab=NDIV[6..3]}
+C {lab_pin.sym} 1070 -1110 3 1 {name=p59 sig_type=std_logic lab=rstb}

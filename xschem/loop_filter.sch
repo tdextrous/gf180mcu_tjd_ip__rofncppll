@@ -11,7 +11,7 @@ T {4.5 pF} 300 -240 0 0 0.2 0.2 {}
 T {1 kOhm} 430 -350 0 0 0.2 0.2 {}
 T {4 pF} 520 -240 0 0 0.2 0.2 {}
 N 180 -240 180 -180 {
-lab=#net1}
+lab=vctrlfb}
 N 180 -120 180 -60 {
 lab=vss}
 N 200 -270 240 -270 {
@@ -21,7 +21,7 @@ lab=vss}
 N 180 -360 180 -300 {
 lab=icp}
 N 80 -210 180 -210 {
-lab=#net1}
+lab=vctrlfb}
 N 240 -270 260 -270 {
 lab=vss}
 N 180 -360 330 -360 {
@@ -39,11 +39,11 @@ lab=icp}
 N 560 -180 560 -60 {
 lab=vss}
 N 560 -360 560 -240 {
-lab=#net2}
+lab=vctrl}
 N 520 -360 560 -360 {
-lab=#net2}
+lab=vctrl}
 N 560 -360 660 -360 {
-lab=#net2}
+lab=vctrl}
 N 180 -60 260 -60 {
 lab=vss}
 N 260 -60 340 -60 {
@@ -85,7 +85,7 @@ W=15.6u
 L=15.6u
 model=cap_mim_2f0fF
 spiceprefix=X
-m=9}
+m=8}
 C {ipin.sym} 80 -360 0 0 {name=p1 lab=icp}
 C {ipin.sym} 100 -60 0 0 {name=p2 lab=vss}
 C {opin.sym} 660 -360 0 0 {name=p3 lab=vctrl}

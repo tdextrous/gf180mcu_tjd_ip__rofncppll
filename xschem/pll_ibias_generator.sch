@@ -349,7 +349,7 @@ model=nfet_03v3
 spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 300 -450 0 1 {name=M5
-L=0.28u
+L=0.5u
 W=10u
 nf=1
 m=1
@@ -363,7 +363,7 @@ model=pfet_03v3
 spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 300 -570 0 1 {name=M6
-L=0.28u
+L=0.5u
 W=10u
 nf=1
 m=1
@@ -377,7 +377,7 @@ model=pfet_03v3
 spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 460 -450 0 0 {name=M7
-L=0.28u
+L=0.5u
 W=40u
 nf=1
 m=1
@@ -391,7 +391,7 @@ model=pfet_03v3
 spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 460 -570 0 0 {name=M8
-L=0.28u
+L=0.5u
 W=40u
 nf=1
 m=1
@@ -405,7 +405,7 @@ model=pfet_03v3
 spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 660 -450 0 0 {name=M9
-L=0.28u
+L=0.5u
 W=20u
 nf=1
 m=1
@@ -419,7 +419,7 @@ model=pfet_03v3
 spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 660 -570 0 0 {name=M10
-L=0.28u
+L=0.5u
 W=20u
 nf=1
 m=1
@@ -433,7 +433,7 @@ model=pfet_03v3
 spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 860 -450 0 0 {name=M11
-L=0.28u
+L=0.5u
 W=20u
 nf=1
 m=1
@@ -447,7 +447,7 @@ model=pfet_03v3
 spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 860 -570 0 0 {name=M12
-L=0.28u
+L=0.5u
 W=20u
 nf=1
 m=1
@@ -461,7 +461,7 @@ model=pfet_03v3
 spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 1060 -450 0 0 {name=M13
-L=0.28u
+L=0.5u
 W=20u
 nf=1
 m=1
@@ -475,7 +475,7 @@ model=pfet_03v3
 spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 1060 -570 0 0 {name=M14
-L=0.28u
+L=0.5u
 W=20u
 nf=1
 m=1
@@ -489,7 +489,7 @@ model=pfet_03v3
 spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 1260 -450 0 0 {name=M15
-L=0.28u
+L=0.5u
 W=4u
 nf=1
 m=1
@@ -503,7 +503,7 @@ model=pfet_03v3
 spiceprefix=X
 }
 C {symbols/pfet_03v3.sym} 1260 -570 0 0 {name=M16
-L=0.28u
+L=0.5u
 W=4u
 nf=1
 m=1

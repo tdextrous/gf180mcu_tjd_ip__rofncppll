@@ -7,7 +7,11 @@ S {}
 E {}
 T {Vhi = 0.4V
 Vlo = 0.3V
-VCC = 3.3V} 1560 -580 0 0 0.4 0.4 {}
+VCC = 3.3V} 1650 -550 0 0 0.4 0.4 {}
+T {1 pF} 1060 -280 0 0 0.2 0.2 {}
+T {1 pF} 1220 -280 0 0 0.2 0.2 {}
+T {100 kOhm} 950 -330 0 0 0.2 0.2 {}
+T {100 kOhm} 1110 -330 0 0 0.2 0.2 {}
 N 760 -250 800 -250 {
 lab=#net1}
 N 760 -450 760 -250 {
@@ -238,6 +242,34 @@ N 1880 -640 2000 -640 {
 lab=vdd}
 N 1880 -60 2000 -60 {
 lab=vss}
+N 1160 -510 1200 -510 {
+lab=rstb}
+N 1240 -580 1240 -540 {
+lab=vdd}
+N 1240 -510 1250 -510 {
+lab=vdd}
+N 1250 -560 1250 -510 {
+lab=vdd}
+N 1240 -560 1250 -560 {
+lab=vdd}
+N 1240 -480 1240 -340 {
+lab=up_or_dn_filt}
+N 1240 -640 1240 -580 {
+lab=vdd}
+N 1010 -320 1010 -60 {
+lab=vss}
+N 1170 -320 1170 -60 {
+lab=vss}
+N 1380 -210 1400 -210 {
+lab=vss}
+N 1380 -210 1380 -60 {
+lab=vss}
+N 1380 -510 1400 -510 {
+lab=vss}
+N 1380 -510 1380 -210 {
+lab=vss}
+N 1610 -440 1610 -60 {
+lab=vss}
 C {symbols/nfet_03v3.sym} 820 -250 0 0 {name=M51
 L=0.28u
 W=0.6u
@@ -322,42 +354,7 @@ sa=0 sb=0 sd=0
 model=pfet_03v3
 spiceprefix=X
 }
-C {res.sym} 1010 -340 1 0 {name=R1
-value=100K
-footprint=1206
-device=resistor
-m=1}
-C {capa.sym} 1100 -250 0 0 {name=C1
-m=1
-value=1p
-footprint=1206
-device="ceramic capacitor"}
-C {res.sym} 1170 -340 1 0 {name=R2
-value=100K
-footprint=1206
-device=resistor
-m=1}
-C {capa.sym} 1260 -250 0 0 {name=C2
-m=1
-value=1p
-footprint=1206
-device="ceramic capacitor"}
 C {r2r_opamp.sym} 1480 -300 0 0 {name=x1}
-C {res.sym} 1420 -210 0 0 {name=R3
-value=10K
-footprint=1206
-device=resistor
-m=1}
-C {res.sym} 1420 -510 0 0 {name=R4
-value=100K
-footprint=1206
-device=resistor
-m=1}
-C {res.sym} 1610 -460 1 0 {name=R5
-value=300K
-footprint=1206
-device=resistor
-m=1}
 C {symbols/nfet_03v3.sym} 1860 -240 0 0 {name=M5
 L=0.28u
 W=0.6u
@@ -423,3 +420,60 @@ sa=0 sb=0 sd=0
 model=pfet_03v3
 spiceprefix=X
 }
+C {symbols/pfet_03v3.sym} 1220 -510 0 0 {name=M9
+L=0.28u
+W=16u
+nf=1
+m=1
+ad="'int((nf+1)/2) * W/nf * 0.18u'"
+pd="'2*int((nf+1)/2) * (W/nf + 0.18u)'"
+as="'int((nf+2)/2) * W/nf * 0.18u'"
+ps="'2*int((nf+2)/2) * (W/nf + 0.18u)'"
+nrd="'0.18u / W'" nrs="'0.18u / W'"
+sa=0 sb=0 sd=0
+model=pfet_03v3
+spiceprefix=X
+}
+C {ipin.sym} 1160 -510 0 0 {name=p10 lab=rstb}
+C {symbols/cap_mim_2f0fF.sym} 1100 -250 0 0 {name=C3
+W=15.6u
+L=15.6u
+model=cap_mim_2f0fF
+spiceprefix=X
+m=2}
+C {symbols/cap_mim_2f0fF.sym} 1260 -250 0 0 {name=C1
+W=15.6u
+L=15.6u
+model=cap_mim_2f0fF
+spiceprefix=X
+m=2}
+C {gf180mcu_fd_pr/ppolyf_u_1k.sym} 1010 -340 3 0 {name=R6
+W=500n
+L=45u
+model=ppolyf_u_1k
+spiceprefix=X
+m=1}
+C {gf180mcu_fd_pr/ppolyf_u_1k.sym} 1170 -340 3 0 {name=R1
+W=500n
+L=45u
+model=ppolyf_u_1k
+spiceprefix=X
+m=1}
+C {gf180mcu_fd_pr/ppolyf_u_1k.sym} 1420 -210 0 0 {name=R2
+W=500n
+L=4.5u
+model=ppolyf_u_1k
+spiceprefix=X
+m=1}
+C {gf180mcu_fd_pr/ppolyf_u_1k.sym} 1420 -510 0 0 {name=R3
+W=500n
+L=45u
+model=ppolyf_u_1k
+spiceprefix=X
+m=1}
+C {gf180mcu_fd_pr/ppolyf_u_1k.sym} 1610 -460 3 0 {name=R4
+W=500n
+L=135u
+model=ppolyf_u_1k
+spiceprefix=X
+m=1}

@@ -43,17 +43,17 @@ C {gnd.sym} 420 -450 0 0 {name=l9 lab=GND}
 C {lab_pin.sym} 490 -690 1 0 {name=p8 sig_type=std_logic lab=clkin}
 C {code.sym} 130 -280 0 0 {name=s1 only_toplevel=false value="
 .include /usr/local/share/pdk/gf180mcuD/libs.tech/ngspice/design.ngspice
-.lib /usr/local/share/pdk/gf180mcuD/libs.tech/ngspice/sm141064.ngspice typical
+.lib /usr/local/share/pdk/gf180mcuD/libs.tech/ngspice/sm141064.ngspice ss
 .lib /usr/local/share/pdk/gf180mcuD/libs.tech/ngspice/sm141064.ngspice cap_mim
 .lib /usr/local/share/pdk/gf180mcuD/libs.tech/ngspice/sm141064.ngspice mimcap_typical
 .lib /usr/local/share/pdk/gf180mcuD/libs.tech/ngspice/sm141064.ngspice moscap_typical
 .lib /usr/local/share/pdk/gf180mcuD/libs.tech/ngspice/sm141064.ngspice res_typical
-.option temp=25
+.option temp=110
 * .ic V(vctrl_unfilt)=0 V(vctrl)=0
 
 
 .control
-tran 12p 70u
+tran 12p 50u
 run
 plot i(V1)
 plot v(clkin)
@@ -103,7 +103,7 @@ value=1
 footprint=1206
 device=resistor
 m=1}
-C {lab_pin.sym} 580 -160 0 0 {name=p31 sig_type=std_logic lab=3*GND,vdd,3*GND}
+C {lab_pin.sym} 580 -160 0 0 {name=p31 sig_type=std_logic lab=GND,4*vdd,2*GND}
 C {lab_pin.sym} 580 -140 0 0 {name=p32 sig_type=std_logic lab=16*GND}
 C {lab_pin.sym} 580 -120 0 0 {name=p33 sig_type=std_logic lab=2*GND}
 C {lab_pin.sym} 580 -220 0 0 {name=p34 sig_type=std_logic lab=rstb}
@@ -115,4 +115,4 @@ C {lab_pin.sym} 380 -320 1 0 {name=p39 sig_type=std_logic lab=vdd}
 C {lab_pin.sym} 880 -260 0 1 {name=p40 sig_type=std_logic lab=lock}
 C {lab_pin.sym} 880 -240 2 0 {name=p41 sig_type=std_logic lab=vctrl}
 C {lab_pin.sym} 880 -220 2 0 {name=p51 sig_type=std_logic lab=clkout}
-C {gf180mcu_tjd_ip_rofncppll__vlog_dsm.sym} 730 -190 0 0 {name=x1}
+C {gf180mcu_tjd_ip_rofncppll__vlog_dsm.sym} 730 -190 0 0 {name=xpll}

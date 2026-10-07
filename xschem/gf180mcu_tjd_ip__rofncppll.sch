@@ -212,3 +212,5 @@ C {lab_pin.sym} 1560 -860 0 1 {name=p55 sig_type=std_logic lab=rstb}
 C {lab_pin.sym} 1880 -390 0 1 {name=p56 sig_type=std_logic lab=rstb}
 C {ipin.sym} 160 -860 0 0 {name=p57 lab=rstb}
 C {lab_wire.sym} 2100 -710 0 0 {name=p58 sig_type=std_logic lab=vco}
+C {lab_pin.sym} 1050 -580 3 0 {name=p59 sig_type=std_logic lab=NDIV[6:3]}
+C {lab_pin.sym} 1070 -1110 3 1 {name=p60 sig_type=std_logic lab=rstb}
